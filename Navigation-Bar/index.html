@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        .navbar {
+            background-color: #f9f8fa;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+            justify-content: right;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar li {
+            display: inline;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .navbar a::after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            background-color: #333;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .Resume-Btn {
+            background-color: #f9f8fa;
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .navbar-2 {
+            background-color: #f9f8fa;
+            padding: 10px;
+            border-radius: 6px;
+            width: 100px;
+        }
+
+        .navbar-2 ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-2 li {
+            margin-bottom: 12px;
+        }
+
+        .navbar-2 a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .navbar-2 a::after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            background-color: #333;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar-2 a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .navbar-2 .Resume-Btn {
+            display: inline-block;
+            background-color: #f9f8fa;
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .navbar-3 {
+            background-color: #f9f8fa;
+            border-radius: 6px;
+            padding: 10px;
+        }
+
+        .navbar-3 ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            justify-content: right;
+            align-items: center;
+        }
+
+        .navbar-3 a {
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+        }
+
+        .navbar-3 .dropdown-content {
+            display: none;
+        }
+
+        .navbar-3 .dropdown:hover .dropdown-content {
+            display: block;
+            position: absolute;
+            background-color: #f9f8fa;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar-container">
+        <h2>Horizontal Navigation Bar</h2>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><button class="Resume-Btn">Resume</button></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="navbar-container-2">
+        <h2>Vertical Navigation Bar</h2>
+        <nav class="navbar-2">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><button class="Resume-Btn">Resume</button></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="navbar-container-3">
+        <h2>Dropdown Navigation Bar</h2>
+        <nav class="navbar-3">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class="dropdown"><a href="#">About</a>
+                    <div class="dropdown-content">
+                        <a href="#">Experience</a>
+                        <a href="#">Work</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </li>
+                <li><button class="Resume-Btn">Resume</button></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+</html>
